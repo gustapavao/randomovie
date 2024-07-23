@@ -17,22 +17,24 @@ RandoMovie is a Python application designed to help users randomly select movies
 
 2. Navigate to the project directory:
 
-sh
-
-cd randomovie
+   ```sh
+   cd randomovie
 
 3. Install the necessary dependencies:
 
-sh
 
+    ```sh
     pip install -r requirements.txt
+    ```
 
 4. Usage
 
 To use the application, run the src/main.py script by passing one or more usernames as arguments:
 
-sh
-python src/main.py username1 username2 username3
+    
+    python src/main.py username1 username2 username3
+    
+
 
 If everything goes well, you will see the name of a randomly selected movie. If there is an error, such as an incorrect username, an error message will be displayed.
 
