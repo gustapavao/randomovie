@@ -6,8 +6,7 @@ class RandoMovie:
         """
         Initializes a RandoMovie object with default values.
         """
-        self.user = "pavaogus"  # Default user (example)
-        self.selected_movies = []  # List to store selected movies
+        self.selected_movies = []  
 
     def getting_page(self, user):
         """
