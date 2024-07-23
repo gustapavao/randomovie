@@ -2,17 +2,19 @@ body {
     margin: 0;
     padding: 0;
     background-color: #2f2f2f;
+    font-family: Arial, sans-serif;
 }
 
 a {
     text-decoration: none;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 #logo {
@@ -22,41 +24,118 @@ main{
 
 p {
     margin: 80px 0;
-    color: white
-}
-
-#button-case{
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-button {
-    cursor: pointer;
-    background-color: #419424;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
     color: white;
+    text-align: center;
 }
 
-#generate-movie {
-    margin-top: 50px;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #input-id {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid white;
-    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    color: white;
+    text-align: center;
 }
 
-#input-id::placeholder{
-    text-align: center;
+#input-id.error {
+    border-bottom: 1px solid red;
+}
+
+#input-id::placeholder {
     color: #838383;
 }
 
-#input-id:focus{
+#input-id:focus {
     color: blanchedalmond;
+}
+
+#error-message {
+    margin-top: 5px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #419424;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+#button-case {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#generate-movie {
+    margin-top: 50px;
+}
+
+#users {
+    list-style-type: none; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#users li {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: -40px; /*Resolver esta lambança depois */
+    border-radius: 5px;
+}
+
+#user-list-container {
+    text-align: center;
+}
+
+#user-list-title {
+    color: white;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    #button-case {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    p {
+        margin: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo img {
+        width: 200px; 
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
 }

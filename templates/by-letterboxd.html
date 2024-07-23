@@ -9,7 +9,7 @@
 <body>
     <header>
         <div id="logo">
-            <a href="index.html">><img src="/static/img/logo.png" alt="Random Movie"></a>
+            <a href="index.html"><img src="/static/img/logo.png" alt="Random Movie"></a>
         </div>
     </header>
     <main>
@@ -22,11 +22,16 @@
             <input type="text" name="letterboxd-id" id="input-id" placeholder="pavaogus">
             <span id="line"></span>
             <button type="submit">Add</button>
-        </form>
+            <p id="error-message" style="color: red; display: none;">Por favor, insira um ID válido.</p>
+        </form>    
+        <div id="user-list-container">
+            <p id="user-list-title" style="display: none;">Users</p>
+            <ul id="users"></ul>
+        </div>
         <div id="button-case">
             <a id="generate-movie" href="by-letterboxd.html"><button>Generate Movie</button></a>
         </div>
     </main>
-
+    <script src="/static/js/script_search_users_page.js"></script>
 </body>
-</html> 
+</html>
